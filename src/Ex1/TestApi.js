@@ -19,12 +19,12 @@ export default function Api() {
             />
 
             {cours.filter((c) => c.id.toString() === id) 
-                .map((c, i) => (
-                    <div key={c.id}>
-                        <p>{c.id}</p>
-                        <p>{c.name}</p>
-                        <p>{c.email}</p>
-                        <p>{c.body}</p>
+                .map((c) => (
+                    <div key={c.id} style={{ border: "1px solid #ccc", padding: "10px", marginBottom: "10px", borderRadius: "5px", backgroundColor: "#f9f9f9" }}>
+                        <p><h2>Id:</h2> {c.id}</p>
+                        <p><h2>Name:</h2> {c.name}</p>
+                        <p><h2>Email:</h2> {c.email}</p>
+                        <p><h2>Body:</h2> {c.body}</p>
                     </div>
                 ))}
         </>
