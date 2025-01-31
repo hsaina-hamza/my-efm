@@ -12,17 +12,22 @@ export default function Preje(){
     const [Description,setDescription] = useState('')
     const [Imag,setImage] = useState(null)
     const [Prix,setPri] = useState('')
+    const [Ajouter,setAjouter]=useState([]);
 
-    const [Ajouter,setAjouter]=useState(null);
 
-    const button =()=>{
-        
-        setAjouter({Reference,Nom,Categorie,Description,Imag,Prix})}
+    function Ah(e){
+        e.preventDefault();
+        setAjouter([...Ajouter,{Reference,Nom,Categorie,Description,Imag,Prix}])
+      };
+      function Suppremi(Sup){
+        setAjouter(Ajouter.filter((S,i)=>i !== Sup ));
+
+      }
     return(
         <>
     
         <div >
-        <form classNem=""  id='form'>
+        <form classNem=""  id='form' onSubmit={Ah}>
         <h6>Gestion des produits:</h6>
           Reference : <input type="text" value={Reference} onChange={(e)=>setReference(e.target.value)}/><br /><br />
           Nom Produit: <input type="text" value={Nom} onChange={(e)=>setNom(e.target.value)}/><br /><br />
@@ -36,11 +41,12 @@ export default function Preje(){
           <br /><br />
           Image Produit:<input type="file" value={Imag} onChange={(e)=>setImage(e.target.value)}></input>
           <br /><br />
-          <button type="button" onClick={button}>valider</button>
+          <button type="submit" >valider</button>
+          
   
   
         </form>
-        {/* {Ajouter &&( */}
+      
         <tabel >
             <tr>
                 <th>Reference</th>
@@ -49,18 +55,22 @@ export default function Preje(){
                 <th>Prix</th>
                 <th>Categorie</th>
                 <th>Image</th>
+                <th>Atction</th>
             </tr>
             
-            {Ajouter &&(
-          <tr>
-            <td>{Ajouter.Reference}</td>
-            <td>{Ajouter.Nom}</td>
-            <td>{Ajouter.Categorie}</td>
-            <td>{Ajouter.Description}</td>
-            <td>{Ajouter.Imag}</td>
-            <td>{Ajouter.Prix}</td>
-          </tr>
-        )}
+            {Ajouter.map((c,e)=>(
+               <tr key={e}>
+               <td>{c.Reference}</td>
+               <td>{c.Nom}</td>
+               <td>{c.Categorie}</td>
+               <td>{c.Description}</td>
+               <td>{c.Imag}</td>
+               <td>{c.Prix}</td>
+               <td>
+               <button onClick={()=>Suppremi(e)}>Suppremi</button>
+               </td>
+             </tr>
+             ))}
          </tabel>
       </div>
 
