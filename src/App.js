@@ -13,13 +13,6 @@ import TestApi from '../src/Ex1/TestApi.js'
 
 function App() {
   return (
-  // <>
-  // {/* <Preje1 /> */}
-  // {/* <Preje /> */}
-  // {/* <Parte2 /> */}
-  // <Headre />
-  // </>
-
   <BrowserRouter>
   <Naveber />
     <Routes>
