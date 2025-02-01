@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Router } from "react-router-dom";
 
 import { BrowserRouter} from 'react-router-dom';
 import './App.css';
@@ -8,7 +8,9 @@ import Preje1 from './New folder/Preje1.jsx'
 import Naveber from './New folder/Naveber.js';
 import Afficher from './Ex1/Gestion_BIBLIO.js'
 import Headre  from "./Ex1/Header.jsx";
-import TestApi from '../src/Ex1/TestApi.js'
+import TestApi from '../src/Ex1/TestApi.js';
+import AjouterLivre from './Ex1/Gestion_Ajouter.js'
+import Parte2 from './New folder/Parte2.js'
 
 
 function App() {
@@ -21,6 +23,8 @@ function App() {
       <Route path="*" element={<Afficher />}/>
       <Route path="Headre" element={<Headre />}/>
       <Route path="Api" element={<TestApi />} />
+      <Route path="AjouterLivre" element={<AjouterLivre />}/>
+      <Route path="Parte2" element={<Parte2 />}/>
     </Routes>
   </BrowserRouter>
   );

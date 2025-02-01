@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function F() {
+export default function Parte2() {
     const [nom, setNom] = useState("");
     const [prenom, setPrenom] = useState("");
     const [age, setAge] = useState("");

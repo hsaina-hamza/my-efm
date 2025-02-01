@@ -13,7 +13,7 @@ export default function Naveber(){
                 <Link to="Preje1">Preje1</Link>
             </li>
             <li>
-                <Link to="Preje2">Preje2</Link>
+                <Link to="Parte2">Preje2</Link>
             </li>
             <li>
                 <Link to="Headre">Header</Link>
@@ -23,6 +23,9 @@ export default function Naveber(){
             </li>
             <li>
                 <Link to="*">Gestion_BIBLIO</Link>
+            </li>
+            <li>
+                <Link to="AjouterLivre">Gestion_Ajouter</Link>
             </li>
         </ul>
     )
