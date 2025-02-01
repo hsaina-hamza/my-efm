@@ -26,7 +26,7 @@ export default function Afficher() {
     <u><h2 style={{textAlign:"center"}}>Liste des Livres</h2></u>
          {listLivres.map((list,i)=>(
       
-           <div key={i} className='row'>
+           <div key={i}>
              <img src={list.photo} style={{width:"50px",height:"50px"}}/>
              <p><strong>Titre:</strong>{list.Titre}</p>
              <p><strong>Auteur:</strong>{list.Auteur}</p>
