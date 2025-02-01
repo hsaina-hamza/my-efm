@@ -21,6 +21,9 @@ export default function Naveber(){
             <li>
                 <Link to="Api" >API</Link>
             </li>
+            <li>
+                <Link to="*">Gestion_BIBLIO</Link>
+            </li>
         </ul>
     )
 }

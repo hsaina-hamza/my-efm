@@ -19,7 +19,7 @@ export default function Preje(){
         e.preventDefault();
         setAjouter([...Ajouter,{Reference,Nom,Categorie,Description,Imag,Prix}])
       };
-      function Suppremi(Sup){
+      function Supprimer(Sup){
         setAjouter(Ajouter.filter((S,i)=>i !== Sup ));
 
       }
@@ -67,7 +67,7 @@ export default function Preje(){
                <td>{c.Imag}</td>
                <td>{c.Prix}</td>
                <td>
-               <button onClick={()=>Suppremi(e)}>Suppremi</button>
+               <button onClick={()=>Supprimer(e)}>Supprimer</button>
                </td>
              </tr>
              ))}
