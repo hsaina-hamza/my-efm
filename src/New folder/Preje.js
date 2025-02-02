@@ -19,6 +19,7 @@ export default function Preje(){
         e.preventDefault();
         setAjouter([...Ajouter,{Reference,Nom,Categorie,Description,Imag,Prix}])
       };
+      
       function Supprimer(Sup){
         setAjouter(Ajouter.filter((S,i)=>i !== Sup ));
 

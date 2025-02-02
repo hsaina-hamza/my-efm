@@ -16,10 +16,7 @@ function Preje1() {
 
     const Affichage = (e) => {
         e.preventDefault()
-        // alert("ttttt")
-        // sett(`Nom:${Nom},Prenom:${Prenom},Date de naissance:${Date},Mail:${Mail},Votre site:${votre},Code:${Homme},Pays:${Select}`)
         sett(...t, { Nom, Prenom, Date, Mail, votre, Homme, Select, checkbox, text, file })
-
     };
     function ls(e) {
         if (checkbox.includes(e.target.value)) {

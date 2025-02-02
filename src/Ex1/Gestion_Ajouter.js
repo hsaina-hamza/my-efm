@@ -10,7 +10,7 @@ export default function AjouterLivre(){
     const [Ajouter,setAjouter] = useState([]);
 
 const Ajout = (e)=>{
-    e.preventDefalt();
+    e.preventDefault();
     setAjouter([...Ajouter,{Titere,Nombre,Auteur,Imge}])
 };
 

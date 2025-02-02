@@ -6,7 +6,7 @@ export default function Api() {
     const [id, setid] = useState('');
 
     useEffect(() => {
-        axios.get('https://jsonplaceholder.typicode.com/comments?postId=1')
+        axios.get('https://jsonplaceholder.typicode.com/comments?')
             .then((response) => setcours(response.data))
     }, []);
 
